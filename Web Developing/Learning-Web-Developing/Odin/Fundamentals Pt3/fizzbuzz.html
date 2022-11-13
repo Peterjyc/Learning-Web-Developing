@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    console.log("test");
+    </script>
+
+    <script>
+        // let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+        // for (let i = 1; i <= answer; i++) {
+        // if (i % 3 === 0 && i % 5 === 0) {
+        //     console.log("FizzBuzz");
+        // } else if (i % 3 === 0) {
+        //     console.log("Fizz");
+        // } else if (i % 5 === 0) {
+        //     console.log("Buzz");
+        // } else {
+        //     console.log(i);
+        // }
+        // }
+        let answer = parseInt(prompt("Enter a number"));
+        function fizzbuzz(number){
+            let result = [];
+            for(let i = 1; i <= number; i++){
+                if (i % 3 == 0 && i % 5 == 0){
+                    result.push("FizzBuzz");
+                    console.log("FizzBuzz");
+                } else if (i % 3 == 0){
+                    console.log("Fizz");
+                    result.push("Fizz");
+                } else if (i % 5 == 0){
+                    console.log("Buzz");
+                    result.push("Buzz");
+                } else {
+                    result.push(i);
+                    console.log(i)
+                }
+            }
+            return result;
+        }
+        console.log(fizzbuzz(answer));
+    </script>
+</body>
+</html>
