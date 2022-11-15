@@ -30,16 +30,12 @@
             for(let i = 1; i <= number; i++){
                 if (i % 3 == 0 && i % 5 == 0){
                     result.push("FizzBuzz");
-                    console.log("FizzBuzz");
                 } else if (i % 3 == 0){
-                    console.log("Fizz");
                     result.push("Fizz");
                 } else if (i % 5 == 0){
-                    console.log("Buzz");
                     result.push("Buzz");
                 } else {
                     result.push(i);
-                    console.log(i)
                 }
             }
             return result;
