@@ -29,7 +29,9 @@ child2.textContent = "ME TOO!"
 contentdiv.appendChild(child1);
 contentdiv.appendChild(child2);
 
-const btn = document.querySelector('#btn');
+var btn = document.getElementById('btn');
+console.log("test");
+
 btn.addEventListener('click', function (e) {
     console.log(e);
   });
