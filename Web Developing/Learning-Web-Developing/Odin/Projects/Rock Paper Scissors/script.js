@@ -32,9 +32,41 @@ function getComputerChoice(){
 // console.log("Paper = " + paper)
 // console.log("Scissors = " + scissors)
 
-let player = prompt("Enter Rock Paper or Scissors");
-player = player[0].toUpperCase() + player.substring(1);
+let choices = document.querySelectorAll('button');
+console.log(choices);
+let playerCounter = 0;
+let compCounter = 0;
+let tie = 0;
+for (i of choices) {
+  i.addEventListener('click', function() {
+    let player = this.id;
+    let computer = getComputerChoice();
+    let result = gamePlay(player, computer);
+    if (result == 1){
+        playerCounter++;
+        msgbox = "You Win!"
+    } else if (result == 2){
+        compCounter++;
+        msgbox = "You Lose :("
+    } else if (result == 3){
+        tie ++;
+        msgbox = "It's a Tie!"
+    }
 
+    document.getElementById("result").innerHTML = player;
+    document.getElementById("compResult").innerHTML = computer;
+    document.getElementById("msgbox").innerHTML = msgbox;
+    document.getElementById("playerScore").innerHTML = playerCounter;
+    document.getElementById("computerScore").innerHTML = compCounter;
+    document.getElementById("tieScore").innerHTML = tie;
+});
+}
+
+
+
+
+
+let winCounter = 0;
 
 function gamePlay(playerSelection, computerSelection){
 
@@ -55,24 +87,24 @@ function gamePlay(playerSelection, computerSelection){
         return 2;
     }
 }
-console.log(game());
+//console.log(game());
 
-function game() {
-    let winCounter = 0;
-    let loseCounter = 0;
-    let tieCounter = 0;
-    for (let i = 0; i < 5; i++){
-        if (gamePlay(player, getComputerChoice()) == 1){
-            winCounter++;
-            console.log("Win!");
-        } else if (gamePlay(player, getComputerChoice()) == 2){
-            loseCounter++;
-            console.log("Lose!");
-        } else {
-            tieCounter++;
-            console.log("Tie!");
-        }
-    }
-    return ("Win = " + winCounter + " Lose = " + loseCounter + " Tie = " + tieCounter);
+//function game() {
+    // let winCounter = 0;
+    // let loseCounter = 0;
+    // let tieCounter = 0;
+    // for (let i = 0; i < 5; i++){
+    //     if (gamePlay(player, getComputerChoice()) == 1){
+    //         winCounter++;
+    //         console.log("Win!");
+    //     } else if (gamePlay(player, getComputerChoice()) == 2){
+    //         loseCounter++;
+    //         console.log("Lose!");
+    //     } else {
+    //         tieCounter++;
+    //         console.log("Tie!");
+    //     }
+    // }
+    // return ("Win = " + winCounter + " Lose = " + loseCounter + " Tie = " + tieCounter);
 
-}
+//}

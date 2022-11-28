@@ -1,0 +1,13 @@
+
+.buttons {
+    margin: auto;
+    border: 3px solid green;
+    text-align: center;
+}
+
+button {
+    background-color: lightblue;
+    padding: 40px;
+    width: 155px;
+    border: 15px solid white;
+}
