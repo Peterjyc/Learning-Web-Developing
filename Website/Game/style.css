@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+main {
+    padding: 20px;
+}
+#resources {
+    display: flex;
+    margin-bottom: 20px;
+}
+#resources div {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+#resources div:first-child {
+    background-color: #333;
+    color: #fff;
+}
+#resources div:nth-child(2) {
+    background-color: #ffdab9;
+}
+#resources div:nth-child(3) {
+    background-color: #d3d3d3;
+}
+#actions {
+    display: flex;
+    margin-bottom: 20px;
+}
+#actions div {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+#actions div:first-child {
+    background-color: #333;
+    color: #fff;
+}
+#actions div:nth-child(2) {
+    background-color: #ffdab9;
+}
+#actions div:nth-child(3) {
+    background-color: #d3d3d3;
+}
+#upgrades {
+    display: flex;
+    margin-bottom: 20px;
+}
+#upgrades div {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+#upgrades div:first-child {
+    background-color: #333;
+    color: #fff;
+}
+#upgrades div:nth-child(2) {
+    background-color: #ffdab9;
+}
+#upgrades div:nth-child(3) {
+    background-color: #d3d3d3;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
