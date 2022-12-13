@@ -4,12 +4,17 @@
     margin: auto;
     height: 580px;
     border: 5px solid black;
-
+    overflow: hidden;
 }
 .screen {
     width: 100%;
     background-color: darkgrey;
     height: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-size: 400%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .buttonGrid {
     display: grid;
@@ -17,8 +22,13 @@
     border: 10px solid yellow;
 }
 .button {
-    background-color: grey;
-    border: 1px solid white;
+    background-color: beige;
+    border: 1px solid black;
     width: 87px;
     height: 87px;
+    font-size: 200%;
   }
+
+.button:active {
+background-color: darkgoldenrod;
+}
