@@ -1,0 +1,24 @@
+.main {
+    background-color: lightgrey;
+    width: 350px;
+    margin: auto;
+    height: 580px;
+    border: 5px solid black;
+
+}
+.screen {
+    width: 100%;
+    background-color: darkgrey;
+    height: 100px;
+}
+.buttonGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    border: 10px solid yellow;
+}
+.button {
+    background-color: grey;
+    border: 1px solid white;
+    width: 87px;
+    height: 87px;
+  }
