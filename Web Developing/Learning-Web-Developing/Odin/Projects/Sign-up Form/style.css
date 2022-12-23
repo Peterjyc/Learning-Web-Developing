@@ -1,0 +1,41 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+div {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+.leftpane {
+    height: 100vh;
+    width: 30vw;
+    float: left;
+    background-image: url('https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+
+}
+
+.right{
+    float: right;
+    width: 68vw;
+    display: flex;
+    flex-direction: column;
+    height: 38vh;
+}
+
+.form, .submit {
+    height:30vh;
+}
+
+.odin {
+    width: 100%;
+    margin-top: 33%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
