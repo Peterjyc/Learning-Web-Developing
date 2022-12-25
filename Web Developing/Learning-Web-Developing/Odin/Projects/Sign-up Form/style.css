@@ -28,7 +28,7 @@ div {
 .odin {
     position: absolute;
     width: 34%;
-    top: 25%;
+    top: 30%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
@@ -39,22 +39,17 @@ div {
 }
 
 .odinimg {
-    width: 1em;
+    width: 3rem;
 }
 
 .right{
     float: right;
     width: 66%;
     flex-direction: column;
-    height: 40vh;
+    height: 30vh;
     font-family: sans-serif;
 
 }
-
-.form, .submit {
-    height:30vh;
-}
-
 .main, .submit {
     background-color: rgba(237, 252, 249, 0.5);
 }
@@ -66,15 +61,57 @@ div {
 }
 
 .main > p {
-    padding-left: 2em;
-    padding-bottom: 1em;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
 }
 
 .main > p:last-child {
-    padding-bottom: 3em;
+    padding-bottom: 3rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);;
+}
+.form > h3{
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1.5rem;
+}
+fieldset > div {
+    /* border: 2px solid black; */
+    float: left;
+    height: 3rem;
+    width: 25%;
+    flex-direction: column;
+    padding-right: 3rem;
+    padding-left: 1rem;
+    padding-bottom: .5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 0.7rem;
+
 }
 
-.form > h3{
-    padding-top: 1em;
-    padding-left: 2em;
+input {
+    border: 1px solid #E5E7EB;
+    height: 1.5em;
+    border-radius: 5px;
+    padding: 4px 2px 5px 5px;
+}
+
+
+button {
+    border: 1px solid black;
+    width: 25%;
+    height: 2.5rem;
+    float: left;
+    margin: 2rem;
+    border-radius: 5px;
+
+}
+
+.error {
+    border: 1px solid red;
 }

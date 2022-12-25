@@ -17,9 +17,40 @@
         </div>
         <div class="form right">
             <h3>Let's do this!</h1>
+            <fieldset>
+                <div class="firstname">
+                    <label for="first_name">FIRST NAME</label>
+                    <input type="text" id="first_name" name="first_name">
+                </div>
+
+                <div class="lastname">
+                    <label for="last_name">LAST NAME</label>
+                    <input type="text" id="last_name" name="last_name">
+                </div>
+                <div class="email">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="tel">
+                    <label for="Phone">PHONE NUMBER</label>
+                    <input type="tel" id="tel" name="tel">
+                </div>
+                <div class="password">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" class="error">
+                </div>
+
+                <div class="passcheck">
+                    <label for="passcheck">CONFIRM PASSWORD</label>
+                    <input type="password" id="passcheck" name="passcheck">
+                </div>
+            </fieldset>
 
         </div>
-        <div class="submit right">submit</div>
+        <div class="submit right">
+            <button class="submit" type="submit">Create Account</button>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
