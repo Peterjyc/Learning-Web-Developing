@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    width: 100%;
+    grid-column: 20% 80%;
+}
+div {
+    border: 1px solid black;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 20% 50% 5% 10% 15%;
+}
+
+.sidebar {
+    display: grid;
+    grid-column: 1;
+}
