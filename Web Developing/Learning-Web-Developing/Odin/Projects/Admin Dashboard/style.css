@@ -6,7 +6,7 @@
 body {
     display: grid;
     width: 100%;
-    grid-column: 20% 80%;
+    grid-template-columns: repeat(4, 1fr);
 }
 div {
     border: 1px solid black;
@@ -14,10 +14,36 @@ div {
 
 .header {
     display: grid;
-    grid-template-columns: 20% 50% 5% 10% 15%;
+    grid-column: 1/5;
+    height: 10vh;
+    grid-template-columns: 3fr 5fr 1fr 1fr 2fr;
 }
 
 .sidebar {
     display: grid;
-    grid-column: 1;
+    grid-row: 2 / 6;
+    gap: 20px;
+}
+
+.intro {
+    display: grid;
+    grid-column: 2 / 5;
+    grid-template-columns: 5fr 4fr;
+    grid-row: 2;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projects {
+    display: grid;
+    grid-column: 2 / 4;
+    grid-row: 3 / 6;
+}
+.cards {
+    display: grid;
+    height: 40vh;
+    grid-template-columns: 1fr 1fr;
 }
