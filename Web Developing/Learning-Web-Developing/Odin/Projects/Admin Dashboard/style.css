@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     border: 0;
@@ -7,8 +9,8 @@ body {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 2fr 3fr 3fr 3fr;
+    grid-template-columns: 2fr 3fr 3fr 2fr;
+    grid-template-rows: 1fr 1.5fr 3fr 3fr 3fr 1fr;
 }
 div {
     border: 1px solid black;
@@ -22,14 +24,18 @@ div {
 
 .sidebar {
     display: grid;
-    grid-row: 1 / 6;
+    grid-row: 1 / 7;
     grid-column: 1;
-    grid-template-rows: repeat(auto, 1fr);
-    gap: 5px;
+    grid-template-rows: 1.5fr 2fr 1fr 3fr 5fr;
+    background-color: #3b82f6;
 }
 
-.sidebar > div {
-    background-color: aqua;
+.sidecontainer {
+    display: grid;
+}
+
+.sidebutton {
+    height: 40px;
 }
 
 .intro {
@@ -47,25 +53,31 @@ div {
 .projects {
     display: grid;
     grid-column: 2 / 4;
-    grid-row: 3 / 5;
-    margin-top: 20px;
+    grid-row: 3 / 6;
+    grid-template-rows: 1fr 20fr;
+    background-color: #bae6fd;
+    padding: 10px;
 
 }
 .cards {
     display: grid;
-    height: 40vh;
     grid-template-columns: 1fr 1fr;
-    grid-row: 3 / 5;
-    margin: 10px;
+    gap: 20px;
 }
 
+.card {
+    background-color: white;
+}
 .announcements {
     display: grid;
     grid-row: 3 / 4;
     grid-column: 4;
+    grid-template-rows: 1fr 3fr 3fr 3fr;
 }
 
 .trending {
     grid-column: 4;
     grid-row: 4 / 6;
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
 }
