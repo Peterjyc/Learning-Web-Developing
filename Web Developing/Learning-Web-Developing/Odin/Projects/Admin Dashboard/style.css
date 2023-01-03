@@ -19,18 +19,19 @@ div {
 .header {
     display: grid;
     grid-column: 2 / 5;
-    grid-template-columns: 5fr 2fr 1fr 1fr;
+    grid-template-columns: 8fr 1fr 2fr;
 }
 
 .search {
     display: flex;
-    margin-left: 10px;
+    margin-left: 5%;
     align-items: center;
 }
 
 .search span {
     margin-left: 10px;
 }
+
 input[type="text"] {
     background-color: #e0e0e0;
     border-radius: 5px;
@@ -71,6 +72,12 @@ input[type="text"] {
     padding-left: 5%;
 }
 
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .sidebutton span {
     padding-left: 10%;
 }
@@ -108,6 +115,10 @@ input[type="text"] {
 
 .card {
     background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    border-left-color: orange;
+    border-left-width: 16px;
 }
 .announcements {
     display: grid;
@@ -121,4 +132,19 @@ input[type="text"] {
     grid-row: 4 / 6;
     display: grid;
     grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
+}
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.rounded-circle {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+}
+
+.announcements {
+
 }
