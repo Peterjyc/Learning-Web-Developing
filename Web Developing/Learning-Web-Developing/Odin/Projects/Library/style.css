@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    border: 1px solid black;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+}
+
+.buttonarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add {
+    height: 80%;
+    width: 10%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    width: 20%;
+    height: 30%;
+    margin: 20px;
+    padding: 20px;
+}
