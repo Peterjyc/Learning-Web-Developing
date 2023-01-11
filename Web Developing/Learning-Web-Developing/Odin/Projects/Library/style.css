@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    border: 1px solid black;
+    border: 0;
     padding: 0;
 }
 
@@ -8,6 +8,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-rows: 2fr 10fr 1fr;
+    background-color: #ecfdf5
 }
 
 .header {
@@ -15,11 +16,14 @@ body {
     justify-content: center;
     align-items: center;
     font-size: x-large;
+    background-color: #d1fae5;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5)
 }
 
 .main {
     display: grid;
     grid-template-rows: 1fr 10fr;
+    ;
 }
 
 .buttonarea {
@@ -31,24 +35,49 @@ body {
 .add {
     height: 80%;
     width: 10%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    font-weight: bolder;
 }
-.block {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: grey;
-    display: none;
+
+button:hover {
+    cursor: pointer;
 }
+
+
 .window {
+    display: none;
     position: absolute;
-    width: 20%;
-    height: 20%;
     top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     background-color: white;
-    opacity: 1;
+    padding: 50px;
+    padding-top: 25px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: larger;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
+
+form div{
+    padding: 5px;
+}
+
+form #save {
+    margin-top: 25px;
+    width: 50%;
+    height: 35px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"], input[type="number"] {
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    height: 25px;
+    padding-left: 10px;
+  }
 
 .cards {
     display: flex;
@@ -61,4 +90,34 @@ body {
     height: 30%;
     margin: 20px;
     padding: 20px;
+    border-radius: 10px;
+    background-color: #d1fae5;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.card div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 20%;
+}
+
+.card .title {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.card > div > button {
+    height: 80%;
+    width: 25%;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: #fee2e2;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end
 }

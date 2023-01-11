@@ -12,38 +12,36 @@
         <h1>Library</h1>
     </div>
 
-    <div class="block">
-        <div class="window">
-            <form>
-                <div>
-                    <label for="title">Title: </label>
-                    <input type="text" id="title" name="title">
-                </div>
-                <div>
-                    <label for="author">Author: </label>
-                    <input type="text" id="author" name="title">
-                </div>
-                <div>
-                    <label for="pages">Pages: </label>
-                    <input type="number" id="pages" name="pages">
-                </div>
-                <div>
-                    <label for="read">Read?</label>
+    <div class="window">
+        <form>
+            <div>
+                <label for="title">Title: </label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="author">Author: </label>
+                <input type="text" id="author" name="author" required>
+            </div>
+            <div>
+                <label for="pages">Pages: </label>
+                <input type="number" id="pages" name="pages" required>
+            </div>
+            <div>
+                <label for="read">Read?</label>
 
-                </div>
-                <div>
-                    <label for="read-yes">Yes</label>
-                    <input type="radio" id="read-yes" name="read" value="true">
-                    <label for="read-no">No</label>
-                    <input type="radio" id="read-no" name="read" value="false">
-                </div>
-                <button type="submit">Save</button>
-            </form>
-        </div>
+            </div>
+            <div>
+                <label for="read-yes">Yes</label>
+                <input type="radio" id="read-yes" name="read" value="true">
+                <label for="read-no">No</label>
+                <input type="radio" id="read-no" name="read" value="false" checked>
+            </div>
+            <button type="submit" id = "save">Save</button>
+        </form>
     </div>
     <div class="main">
         <div class="buttonarea">
-            <button class="add">add</button>
+            <button class="add">Add Book</button>
         </div>
         <div class="cards">
         </div>
