@@ -1,19 +1,19 @@
 document.querySelector('button').addEventListener('click', getFetch)
-
+document.querySelector('.bookTitle').innerText = localStorage.getItem('books')
 function getFetch(){
-  const choice = document.querySelector('input').value
-  const url = `https://www.dnd5eapi.co/api/spells/${choice}`
+  const isbn = document.querySelector('input').value
+  const url = `https://openlibrary.org/isbn/${isbn}.json`
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data.subclasses);
-        data.subclasses.forEach(element => {
-          console.log(element.name)
-          const li = document.createElement('li');
-          li.textContent = element.name
-          document.querySelector('.ul').appendChild(li);
-        })
+        console.log(data)
+        const bookTitle = data.title;
+        console.log(bookTitle)
+        const title = document.createElement('p');
+        localStorage.setItem('books', bookTitle)
+          title.textContent = localStorage.getItem('books')
+          document.querySelector('.bookTitle').appendChild(title);
 
       })
       .catch(err => {
