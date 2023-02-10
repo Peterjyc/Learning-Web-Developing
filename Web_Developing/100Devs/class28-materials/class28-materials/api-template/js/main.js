@@ -8,12 +8,11 @@ function getFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
-        const bookTitle = data.title;
+        const bookTitle = localStorage.getItem('books') + "; " + data.title;
         console.log(bookTitle)
-        const title = document.createElement('p');
+        const title = document.querySelector('.bookTitle');
         localStorage.setItem('books', bookTitle)
           title.textContent = localStorage.getItem('books')
-          document.querySelector('.bookTitle').appendChild(title);
 
       })
       .catch(err => {
