@@ -10,6 +10,36 @@ class Animal {
     }
 }
 
+class Dog extends Animal {
+    constructor(name, breed){
+        super(name);
+        this._breed = breed;
+    }
+    get breed(){
+        return this._breed;
+    }
+
+    speak(){
+        super.speak()
+        console.log(`${this.name} barks`)
+
+    }
+}
+
+class Cat extends Animal {
+    constructor(name, breed){
+        super(name);
+        this._breed = breed;
+    }
+
+    speak(){
+        super.speak()
+        console.log(`${this.name} meows`)
+
+    }
+
+}
+
 
 
 // //Create an a class and extend it - Can be anything you would like it to be!
