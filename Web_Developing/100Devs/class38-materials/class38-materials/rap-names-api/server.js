@@ -3,17 +3,25 @@ const app = express();
 const PORT = 8000;
 
 const savage = {
-    'age' : 20,
-    'birthName': 'birthName',
-    'birthLocation': 'birthLocation'
+    'rapper' : {
+        'age' : 20,
+        'birthName': 'birthName',
+        'birthLocation': 'birthLocation'
+    },
+    'rapper2' : {
+        'age' : 25,
+        'birthName': 'birthName2',
+        'birthLocation': 'birthLocation2'
+    }
 }
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname  + '/index.html')
 })
 
-app.get('/api', (request, response)=>{
-    response.json(savage)
+app.get('/api/:name', (request, response)=>{
+    const rapperName = request.params.name.toLowerCase()
+    response.json(savage[rapperName])
 })
 
 app.listen(PORT, ()=>{
