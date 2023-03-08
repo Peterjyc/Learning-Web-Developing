@@ -25,8 +25,8 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     app.get('/', (req, res) => {
         db.collection('quotes').find().toArray()
         .then(results => {
-            console.log(results)
-            res.render('index.ejs', { info: results })
+            console.log(data)
+            res.render('index.ejs', { info: data })
         })
         .catch(error => console.log(error))
         console.log(req.body)
