@@ -25,7 +25,8 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     app.get('/', (req, res) => {
         db.collection('quotes').find().toArray()
         .then(results => {
-            res.render('index.ejs', { quotes: results })
+            console.log(results)
+            res.render('index.ejs', { info: results })
         })
         .catch(error => console.log(error))
         console.log(req.body)
@@ -43,15 +44,11 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     app.put('/quotes', (req, res) => {
         quotesCollection.findOneAndUpdate(
             { name: 'Yoda' },
-            {
-              $set: {
+            {$set: {
                 name: req.body.name,
                 quote: req.body.quote
-              }
-            },
-            {
-              upsert: true
-            }
+              }},
+            {upsert: true}
           )
           .then(res => {
             res.json('Success')
