@@ -2,8 +2,8 @@ console.log('Running');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const MongoClient = require ('mongodb').MongoClient
-const connectionString = 'mongodb+srv://jypeterc:Peter359.@cluster0.dsbrdb2.mongodb.net/?retryWrites=true&w=majority'
+const MongoClient = require ('mongodb').MongoClient;
+const connectionString = process.env.DB_STRING;
 
 
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
@@ -55,5 +55,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
           })
           .catch(error => console.error(error))
       })
+
+      app.put()
 
   })
