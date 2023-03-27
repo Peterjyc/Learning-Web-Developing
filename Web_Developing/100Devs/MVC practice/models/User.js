@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
-    googleID: {
+    googleId: {
         type: String,
         required: true
     },
@@ -18,7 +18,6 @@ const UserSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        required: true
     },
     createdAt: {
         type: Date,

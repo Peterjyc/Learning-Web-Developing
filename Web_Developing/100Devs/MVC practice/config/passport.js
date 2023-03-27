@@ -10,7 +10,7 @@ module.exports = function(passport) {
     },
     async (accessToken, refreshToken, profile, done) => {
         const newUser = {
-            googleID: profile.id,
+            googleId: profile.id,
             displayName: profile.displayName,
             firstName: profile.name.givenName,
             lastName: profile.name.familyName,
@@ -18,7 +18,7 @@ module.exports = function(passport) {
         }
 
         try {
-            let user = await User.findOne({ googleID: profile.id })
+            let user = await User.findOne({ googleId: profile.id })
 
             if(user) {
                 done(null, user)
@@ -31,19 +31,17 @@ module.exports = function(passport) {
         }
 
     }))
-    passport.serializeUser((user, cb) => {
-        process.nextTick(() => {
-          return cb(null, {
-            id: user.id,
-            username: user.username,
-            picture: user.picture
-          });
-        });
-      });
-
-    passport.deserializeUser((user, cb) => {
-    process.nextTick(() => {
-        return cb(null, user);
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
     });
+
+    passport.deserializeUser(async (id, done) => {
+        try {
+            const foundUser = await User.findById(id);
+            console.log('Found User' + foundUser)
+            done(null, foundUser);
+        } catch (err) {
+            done(err);
+        }
     });
 }

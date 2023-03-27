@@ -19,25 +19,29 @@ connectDB();
 
 const app = express();
 
+// Body Parser
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
 if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'))
 }
 
-//Handlebars
-app.engine('.hbs', exphbs.engine({extname: '.hbs'}));
-app.set('view engine', '.hbs');
-
 // Sessions
 app.use(session({
-    secret: 'test1',
-    resave: false,
-    saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection })
-  }))
+  secret: 'test1',
+  resave: false,
+  saveUninitialized: false,
+  store: new MongoStore({ mongooseConnection: mongoose.connection })
+}))
 
 //Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Handlebars
+app.engine('.hbs', exphbs.engine({extname: '.hbs'}));
+app.set('view engine', '.hbs');
 
 //Statis Folder
 app.use(express.static(path.join(__dirname, 'public')))
@@ -45,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 //Routes
 app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/auth'))
+app.use('/stories', require('./routes/stories'))
 
 const PORT = process.env.PORT || 3000
 
