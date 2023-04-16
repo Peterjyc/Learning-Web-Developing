@@ -1,0 +1,17 @@
+function tribonacci(signature,n){
+  if (n == 0) return [];
+  if (n == 1) return [signature[0]];
+  let first = signature[0]
+  let second = signature[1]
+  let third = signature[2]
+  let array = [signature[0], signature[1], signature[2]]
+  for (let i = 3; i < n; i++) {
+    let curr = first + second + third
+    array.push(curr)
+    first = second
+    second = third
+    third = curr
+    console.log(array)
+  }
+  return array;
+}
