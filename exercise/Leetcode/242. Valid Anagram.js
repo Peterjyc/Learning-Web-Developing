@@ -4,6 +4,7 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
+    if (s.length !== t.length) return false;
     let arrayS = s.split('')
     let arraySCount = {};
     let arrayT = t.split('')
@@ -17,8 +18,9 @@ var isAnagram = function(s, t) {
         } else arrayTCount[arrayT[i]]++;
     }
     let result = 0;
+    console.log(arraySCount, arrayTCount)
     for (let i = 0; i < arrayS.length; i++){
-        if (arraySCount[i] === arrayTCount[i] && arrayS.includes(arrayT[i]) && arrayT.includes(arrayS[i])){
+        if (arraySCount[arrayS[i]] === arrayTCount[arrayS[i]] && arrayS.includes(arrayT[i]) && arrayT.includes(arrayS[i])){
             result++;
         }
     }
