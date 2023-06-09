@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Main() {
     return (
-        <div>
-            Main
+        <div className='main'>
+            <img src="img/cake.jpg"/>
         </div>
     )
 }

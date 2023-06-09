@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './Navbar.js';
 import Main from './Main.js'
-import  Menu from './Menu.js'
+import Menu from './Menu.js'
 import Flavour from './Flavour.js'
 import Footer from './Footer.js'
 
