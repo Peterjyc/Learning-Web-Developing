@@ -1,26 +1,35 @@
 *{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0;
   padding: 0;
 
 }
 html {
-  background: linear-gradient(to bottom right, #FFFFFF 5%, #FFEBCD)
+  /* background: linear-gradient(to bottom right, #FFFFFF 5%, #FFEBCD) */
 }
 
 .navbar {
-  height: 10vh;
-  display: grid;
-  grid-template-columns: 40% 20% 40%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.nav-left {
+.nav-menu {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10%;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  height: 100%
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  padding: 10px;
 }
 
 .logo {
@@ -30,45 +39,49 @@ html {
 }
 
 .logo img{
-  height: 9vh;
+  display: flex;
+  justify-content: center;
+  height: 10vh;
   width: auto;
   border-radius: 100%;
+  margin: 10px;
 }
 
 .main {
-  height: 50vh;
+  height: 75vh;
+  width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2%;
 }
 
 .main img {
-  height: auto;
-  width: 80%;
+  /* height: auto; */
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  background-position: center;
+  background-size: cover;
 
 }
 
 .menu {
-  height: 25vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(to bottom left, #FFFFFF 5%, #fff5e7);
+  /* background: linear-gradient(to bottom left, #FFFFFF 5%, #fff5e7); */
+}
+
+.menu-title {
+  margin: 10px;
 }
 
 .card__border {
-  height: 90%;
-  width: auto;
+  height: 40%;
   overflow: hidden;
-  mask-image: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.5) 5%,
-    rgba(0, 0, 0, 0.5) 1%,
-    rgba(0, 0, 0, 1) 10%
-  );
 }
 
 .card__border img {
@@ -79,12 +92,13 @@ html {
 
 .cards {
   width: 100vw;
-  height: 90%;
+  height: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 5%
+  gap: 20px;
 }
 
 .card {

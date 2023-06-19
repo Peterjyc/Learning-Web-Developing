@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './Navbar.js';
 import Main from './Main.js'
 import Menu from './Menu.js'
-import Flavour from './Flavour.js'
+import Flavours from './Flavour.js'
 import Footer from './Footer.js'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Main />
       <Menu />
-      <Flavour />
+      <Flavours />
       <Footer />
     </div>
   );

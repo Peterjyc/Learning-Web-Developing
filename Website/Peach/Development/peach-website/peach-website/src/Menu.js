@@ -1,5 +1,5 @@
 import React from 'react'
-import Cakes from './Cakes.js'
+import Cakes from './components/Cakes.js'
 import Card from './components/Card.js'
 
 export default function Menu() {
@@ -10,7 +10,7 @@ export default function Menu() {
   })
     return (
         <div className='menu'>
-            <h3>Recent orders</h3>
+            <h3 className='menu-title'>Recent orders</h3>
             <div className="cards">
                 {cards}
             </div>
