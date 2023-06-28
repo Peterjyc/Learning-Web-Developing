@@ -1,11 +1,11 @@
 import React from 'react'
-import Flavour from './components/Flavour.js'
+import FlavourList from './components/FlavourList.js'
 import Card from './components/Card.js'
 
 export default function Flavours() {
-    const flavours = Flavour.map(flavour => {
+    const flavours = FlavourList.map(flavour => {
         return (
-            <Card id ={flavour.id} location={flavour.location}/>
+                <Card id ={flavour.id} location={flavour.location} name={flavour.name} objectPosition={flavour.objectPosition} objectFit={flavour.objectFit}/>
         )
     })
     return (

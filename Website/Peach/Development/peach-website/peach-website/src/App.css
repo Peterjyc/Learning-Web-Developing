@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 *{
   /* border: 1px solid black; */
   margin: 0;
@@ -18,10 +20,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  height: 100%
+  gap: 5%;
+  font-family: chewy;
+  font-weight: normal;
+  font-size: larger;
+  height: 100%;
+  background: linear-gradient(to bottom,white 1%, bisque 85%, white);
 }
 
 .nav-button {
@@ -58,20 +62,19 @@ html {
 }
 
 .main img {
-  /* height: auto; */
   position: relative;
   width: 100%;
-  /* height: 100%; */
   background-position: center;
   background-size: cover;
 
 }
 
 .menu {
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 0
   /* background: linear-gradient(to bottom left, #FFFFFF 5%, #fff5e7); */
 }
 
@@ -81,19 +84,38 @@ html {
 
 .card__border {
   height: 40%;
+  width: 30%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .card__border img {
   height: 100%;
   width: 100%;
 
 }
+.flavour-container {
+  height: 60vh
+}
 
-.cards {
-  width: 100vw;
-  height: 100%;
+.flavour-container .img-holder {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+}
+.cards {
+  max-width: 1200px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
@@ -101,19 +123,29 @@ html {
   gap: 20px;
 }
 
-.card {
-  height: 90%;
-  width: 20vw;
-}
-
 .flavours {
-  height: 20vh;
+  height: 90%;
   display: flex;
-  gap: 10%;
-  align-items: center;
+  gap: 10px;
+  /* align-items: center; */
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+
+
+.flavours img {
+  width: 150%; /* Adjust the width to your preference */
+  height: 150%; /* Adjust the height to your preference */
+}
+.flavour-container .card__border {
+  width: 40%;
+  height: 20%;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: left;
+  align-items: center;
+}
 .footer {
   height: 5vh;
 }
