@@ -11,7 +11,7 @@ html {
 }
 
 .navbar {
-  height: 20vh;
+  height: 20%;
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +25,8 @@ html {
   font-weight: normal;
   font-size: larger;
   height: 100%;
-  background: linear-gradient(to bottom,white 1%, bisque 85%, white);
+  margin-left: 3%;
+  /* background: linear-gradient(to bottom,white 1%, bisque 85%, white); */
 }
 
 .nav-button {
@@ -45,10 +46,12 @@ html {
 .logo img{
   display: flex;
   justify-content: center;
-  height: 10vh;
+  height: 15vh;
+  min-height: 15vh;
+  max-height: 15vh;
   width: auto;
   border-radius: 100%;
-  margin: 10px;
+  margin: 15px;
 }
 
 .main {
@@ -110,6 +113,8 @@ html {
   width: 75px;
   height: 75px;
   overflow: hidden;
+  box-shadow: 0 0 5px 0px rgba(255,197,122,1);
+  border: 10px;
 }
 .cards {
   max-width: 1200px;

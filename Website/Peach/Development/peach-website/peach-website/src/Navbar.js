@@ -4,14 +4,14 @@ export default function Navbar() {
     return (
         <div className="navbar">
             <div className='logo'>
-                <img src="img/logo.jpg"/>
+                <img src="img/logo.jpg" alt='logo'/>
             </div>
             <div className="nav-menu">
-                <div className='nav-button'>Home</div>
-                <div className='nav-button'>Cakes</div>
-                <div className='nav-button'>Flavours</div>
-                <div className='nav-button'>Contact Us</div>
-                <div className='nav-button'>Order</div>
+                <div className='spacer'></div>
+                <div className='nav-button'>CAKES</div>
+                <div className='nav-button'>FLAVOURS</div>
+                <div className='nav-button'>CONTACT</div>
+                <div className='spacer'></div>
             </div>
 
         </div>
